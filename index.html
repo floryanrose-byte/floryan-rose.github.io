@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Floryan ROSE | Amiens | Haut-De-France</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+    --primary: #0a2540;
+    --secondary: #0078d4;
+    --background: #f6f9fc;
+    --text: #1f2933;
+    --muted: #6b7280;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Inter',sans-serif; }
+body { background: var(--background); color: var(--text); line-height:1.6; }
+
+/* ===== HEADER ===== */
+header { background:white; padding:30px 20px; border-bottom:1px solid #e5e7eb; text-align:center; }
+header h1 { font-size:2.4rem; font-weight:700; color:var(--primary); margin-bottom:10px; }
+header h2 { font-size:1.1rem; font-weight:400; color:var(--muted); margin-bottom:20px; }
+
+nav { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-bottom:10px; }
+.btn { padding:10px 22px; border-radius:8px; font-weight:600; text-decoration:none; transition:0.3s; cursor:pointer; }
+.btn-primary { background:var(--secondary); color:white; } 
+.btn-primary:hover { background:#005bb5; }
+.btn-outline { border:2px solid var(--secondary); color:var(--secondary); }
+.btn-outline:hover { background:var(--secondary); color:white; }
+
+/* ===== SECTIONS ===== */
+section { max-width:1100px; margin:50px auto; background:white; padding:50px; border-radius:14px; }
+section h3 { font-size:1.6rem; margin-bottom:25px; color:var(--primary); }
+.about { font-size:1.1rem; }
+ul { list-style-type:disc; padding-left:20px; margin-bottom:25px; }
+h4 { margin-top:25px; margin-bottom:12px; color:var(--secondary); font-weight:600; font-size:1.15rem; }
+.formation-item, .job { margin-bottom:25px; font-size:1.05rem; }
+.formation-item strong { color:var(--secondary); font-weight:600; font-size:1.15rem; }
+
+/* ===== IMAGES DU PROFIL ===== */
+.profile-images { display:flex; gap:15px; flex-wrap:wrap; margin-bottom:25px; }
+.profile-images img { width:calc(50% - 7.5px); border-radius:8px; border:1px solid #ddd; }
+
+/* ===== SECTIONS PLEINE PAGE ===== */
+#projets, #alternance, #automatisme, #robotique, #competences, #videos, #hobbies { display:none; position:fixed; inset:0; background:white; padding:50px; overflow-y:auto; z-index:1000; }
+#projets:target, #alternance:target, #automatisme:target, #robotique:target, #competences:target, #videos:target, #hobbies:target { display:block; }
+#projets:target ~ .main-content, #alternance:target ~ .main-content, #automatisme:target ~ .main-content, #robotique:target ~ .main-content, #competences:target ~ .main-content, #videos:target ~ .main-content, #hobbies:target ~ .main-content { display:none; }
+
+.portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:15px; margin-bottom:25px; }
+.portfolio-grid img { width:100%; border-radius:8px; border:1px solid #ddd; }
+
+/* Boutons retour */
+.btn-back { display:inline-block; margin-top:15px; padding:14px 26px; border-radius:8px; background:var(--primary); color:white; font-weight:600; text-decoration:none; transition:0.3s; }
+.btn-back:hover { background:#06305a; }
+
+/* Modale contact */
+#contact-modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); align-items:center; justify-content:center; z-index:2000; overflow-y:auto; }
+#contact-modal:target { display:flex; }
+#contact-modal .modal-content { background:white; padding:35px 40px; border-radius:12px; max-width:450px; width:90%; text-align:center; }
+#contact-modal .close-btn { display:inline-block; margin-top:20px; padding:10px 22px; border-radius:8px; background:var(--secondary); color:white; text-decoration:none; font-weight:600; cursor:pointer; transition:0.3s ease; }
+#contact-modal .close-btn:hover { background:#005bb5; }
+
+/* Texte de description projet */
+.project-text { margin-top:25px; padding:15px; background:#f1f5f9; border-radius:8px; border:1px solid #ddd; }
+
+/* Responsive */
+@media (max-width:768px){ header h1 { font-size:2.2rem; } section { padding:30px; } .profile-images img { width:100%; } }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Floryan ROSE</h1>
+    <h2>Amiens | Haut-De-France</h2>
+    <nav>
+        <a href="cv-floryan-rose.pdf" class="btn btn-primary" target="_blank">CV</a>
+        <a href="#competences" class="btn btn-outline">Compétences</a>
+        <a href="#projets" class="btn btn-outline">Projets</a>
+        <a href="#videos" class="btn btn-outline">Vidéos</a>
+        <a href="#hobbies" class="btn btn-outline">Hobbies</a>
+        <a href="#contact-modal" class="btn btn-outline">Contact</a>
+        <a href="https://fr.linkedin.com/in/floryan-rose-7179a1266" class="btn btn-outline" target="_blank">LinkedIn</a>
+    </nav>
+</header>
+
+<div class="main-content">
+<section>
+    <h3>Bienvenue sur mon site</h3>
+    <p>Utilisez le menu pour accéder à mon CV, mes compétences, mes projets, mes vidéos ou pour me contacter.</p>
+    <div class="profile-images">
+        <img src="images/ee.jpg" alt="Photo profil 1">
+        <img src="images/orga.jpg" alt="Photo profil 2">
+    </div>
+</section>
+</div> <!-- fin main-content -->
+
+<!-- ===== COMPETENCES ===== -->
+<section id="competences">
+    <h3>Compétences</h3>
+    <p class="about">
+        Actuellement étudiant en BUT Génie Electrique Informatique Industrielle, spécialité Automatique Informatique Industrielle. En alternance chez NORDEX comme technicien éolien, je participe aux opérations de maintenance préventive et corrective des éoliennes.
+    </p>
+
+    <h4>Compétences clés</h4>
+    <ul>
+        <li>Hydraulique</li>
+        <li>Mécanique</li>
+        <li>Électronique</li>
+        <li>Éoliennes</li>
+        <li>Automation</li>
+        <li>Installation électrique</li>
+	<li>Gestes premier secours</li>
+    </ul>
+
+    <a href="#" class="btn-back">← Retour à l’accueil</a>
+</section>
+
+<!-- ===== PROJETS ===== -->
+<section id="projets">
+    <h3>Projets / Réalisations</h3>
+    <div class="portfolio-grid">
+        <a href="#alternance" class="btn btn-outline">📁 Alternance</a>
+        <a href="#automatisme" class="btn btn-outline">📁 Automatisme</a>
+        <a href="#robotique" class="btn btn-outline">📁 Robotique</a>
+    </div>
+    <a href="#" class="btn-back">← Retour à l’accueil</a>
+</section>
+
+<section id="alternance">
+    <h3>Dossier Alternance</h3>
+    <div class="portfolio-grid">
+        <img src="images/nordex1.jpg" alt="Nordex 1">
+        <img src="images/nordex2.jpg" alt="Projet Alternance">
+    </div>
+    <div class="project-text">
+        <strong>Description du projet :</strong>
+        <p>Lors de ma 2ème année d'alternance, j'ai dirigé un chantier de changement de multiplicateur "gearbox" d'éolienne. Organisation des équipes, planning et budget.</p>
+    </div>
+    <a href="#projets" class="btn-back">← Retour aux Projets</a>
+</section>
+
+<section id="automatisme">
+    <h3>Dossier Automatisme</h3>
+    <div class="portfolio-grid">
+        <img src="images/auto1.jpg" alt="Automatisme 1">
+    </div>
+    <div class="project-text">
+        <strong>Description du projet :</strong>
+        <p>Le but de ce TP est de concevoir et mettre en œuvre un système automatisé capable de récupérer une pièce située sur une étagère, puis de la transférer vers un plateau de convoyage. La pièce est ensuite prise en charge par un système d’aspiration qui l’achemine vers une table tournante. Cette table permet d’analyser les caractéristiques de la pièce, notamment son matériau (plastique, aluminium ou métal) ainsi que ses dimensions. Ce projet met en avant l’intégration de plusieurs systèmes automatisés, la coordination des mouvements et la gestion du tri de pièces selon leurs propriétés physiques.</p>
+    </div>
+    <a href="#projets" class="btn-back">← Retour aux Projets</a>
+</section>
+
+<section id="robotique">
+    <h3>Dossier Robotique</h3>
+    <div class="portfolio-grid">
+        <img src="images/robot1.jpg" alt="Robotique 1">
+        <img src="images/robot2.jpg" alt="Robotique 2">
+    </div>
+    <div class="project-text">
+        <strong>Description du projet :</strong>
+        <p>Mon projet consistait, après la récupération d’une pièce, à programmer le robot afin qu’il la présente soit à un capteur, soit à un opérateur humain pour permettre son identification. En fonction de cette analyse, la pièce était ensuite soit rejetée dans une poubelle, soit rangée dans un tiroir dédié. Afin d’optimiser le stockage et d’éviter le sur-remplissage, j’ai intégré un système de compteurs permettant de suivre le nombre de pièces présentes dans chaque tiroir et de gérer automatiquement leur capacité maximale. Ce projet m’a permis de travailler sur la logique de décision, la gestion des capteurs et la programmation robotique en mode manuel et automatique.</p>
+    </div>
+    <a href="#projets" class="btn-back">← Retour aux Projets</a>
+</section>
+
+<!-- ===== VIDEOS ===== -->
+<section id="videos">
+    <h3>Vidéos</h3>
+    <div class="portfolio-grid">
+        <p>Ajoutez ici vos vidéos ou captures d’écran de vos projets (format iframe ou lien YouTube)</p>
+    </div>
+    <a href="#" class="btn-back">← Retour à l’accueil</a>
+</section>
+
+<!-- ===== HOBBIES ===== -->
+<section id="hobbies">
+    <h3>Hobbies</h3>
+    <div class="portfolio-grid">
+        <img src="images/hbc1.jpg" alt="Robotique 1">
+        <img src="images/hbc2.jpg" alt="Robotique 2">
+	</div>
+<div class="hobbies-text">
+        <strong>HBC SALOUEL :</strong>
+        <p>Je pratique le handball depuis plus de 9 ans, ce sport m’a permis de développer l’esprit d’équipe, la rigueur et la persévérance. Je joue actuellement en Régionale 2 dans les Hauts-de-France avec le HBC Salouel, et nous enchaînons les compétitions, notamment avec la finale de la Coupe de la Somme pour la seconde fois consécutive. Le handball représente pour moi un véritable équilibre entre passion, engagement sportif et esprit collectif, tout en me poussant à me dépasser à chaque match.</p>
+    </div>
+    <a href="#" class="btn-back">← Retour à l’accueil</a>
+</section>
+
+<!-- ===== MODALE CONTACT ===== -->
+<div id="contact-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+    <div class="modal-content">
+        <h3 id="contact-title">Me contacter</h3>
+        <p>📞 <strong>Téléphone :</strong> 06 42 66 29 84</p>
+        <p>✉️ <strong>Email :</strong> floryan.rose@gmail.com</p>
+        <a href="#" class="close-btn">Fermer</a>
+    </div>
+</div>
+
+<footer>
+    © 2026 • Floryan ROSE – Technicien Éolien
+</footer>
+
+</body>
+</html>
