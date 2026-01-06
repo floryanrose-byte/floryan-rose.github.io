@@ -45,9 +45,9 @@ h4 { margin-top:25px; margin-bottom:12px; color:var(--secondary); font-weight:60
 .profile-images img { width:calc(50% - 7.5px); border-radius:8px; border:1px solid #ddd; }
 
 /* ===== SECTIONS PLEINE PAGE ===== */
-#projets, #alternance, #automatisme, #robotique, #competences, #videos, #hobbies { display:none; position:fixed; inset:0; background:white; padding:50px; overflow-y:auto; z-index:1000; }
-#projets:target, #alternance:target, #automatisme:target, #robotique:target, #competences:target, #videos:target, #hobbies:target { display:block; }
-#projets:target ~ .main-content, #alternance:target ~ .main-content, #automatisme:target ~ .main-content, #robotique:target ~ .main-content, #competences:target ~ .main-content, #videos:target ~ .main-content, #hobbies:target ~ .main-content { display:none; }
+#projets, #alternance, #automatisme, #robotique, #informatique, #competences, #videos, #hobbies { display:none; position:fixed; inset:0; background:white; padding:50px; overflow-y:auto; z-index:1000; }
+#projets:target, #alternance:target, #automatisme:target, #robotique:target, #informatique:target, #competences:target, #videos:target, #hobbies:target { display:block; }
+#projets:target ~ .main-content, #alternance:target ~ .main-content, #automatisme:target ~ .main-content, #robotique:target ~ .main-content, #informatique:target ~ .main-content, #competences:target ~ .main-content, #videos:target ~ .main-content, #hobbies:target ~ .main-content { display:none; }
 
 .portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:15px; margin-bottom:25px; }
 .portfolio-grid img { width:100%; border-radius:8px; border:1px solid #ddd; }
@@ -102,18 +102,19 @@ h4 { margin-top:25px; margin-bottom:12px; color:var(--secondary); font-weight:60
 <section id="competences">
     <h3>Compétences</h3>
     <p class="about">
-        Actuellement étudiant en BUT Génie Electrique Informatique Industrielle, spécialité Automatique Informatique Industrielle. En alternance chez NORDEX comme technicien éolien, je participe aux opérations de maintenance préventive et corrective des éoliennes.
+        Actuellement étudiant en BUT Génie Électrique et Informatique Industrielle, avec une spécialisation en Automatique et Informatique Industrielle, je réalise ma formation en alternance au sein du groupe NORDEX. Cette expérience professionnelle m’a offert une immersion concrète dans le monde du travail, m’a permis de m’intégrer pleinement à une équipe, de participer activement à des projets réels et d’assumer des responsabilités variées, renforçant ainsi mes compétences techniques et professionnelles.
     </p>
 
     <h4>Compétences clés</h4>
     <ul>
+	<li>Informatique</li>
         <li>Hydraulique</li>
         <li>Mécanique</li>
         <li>Électronique</li>
-        <li>Éoliennes</li>
+        <li>Invension</li>
         <li>Automation</li>
         <li>Installation électrique</li>
-	<li>Gestes premier secours</li>
+	<li>Travail en hauteur</li>
     </ul>
 
     <a href="#" class="btn-back">← Retour à l’accueil</a>
@@ -126,6 +127,7 @@ h4 { margin-top:25px; margin-bottom:12px; color:var(--secondary); font-weight:60
         <a href="#alternance" class="btn btn-outline">📁 Alternance</a>
         <a href="#automatisme" class="btn btn-outline">📁 Automatisme</a>
         <a href="#robotique" class="btn btn-outline">📁 Robotique</a>
+	<a href="#informatique" class="btn btn-outline">📁 Informatique</a>
     </div>
     <a href="#" class="btn-back">← Retour à l’accueil</a>
 </section>
@@ -138,7 +140,34 @@ h4 { margin-top:25px; margin-bottom:12px; color:var(--secondary); font-weight:60
     </div>
     <div class="project-text">
         <strong>Description du projet :</strong>
-        <p>Lors de ma 2ème année d'alternance, j'ai dirigé un chantier de changement de multiplicateur "gearbox" d'éolienne. Organisation des équipes, planning et budget.</p>
+        <p>Lors de ma 2ème année d'alternance, j'ai comme projet de diriger un chantier de changement de multiplicateur "gearbox" d'éolienne. Organisation des équipes, planning et budget.</p> <br>
+	<p><strong>En cours...</strong></p>
+    </div>
+<br>
+<br>
+<br>
+<br>
+    <div class="portfolio-grid">
+        <img src="images/maintenance.jpg" alt="Nordex 1">
+        <img src="images/slip.jpg" alt="Projet Alternance">
+    </div>
+    <div class="project-text">
+        <strong>Description du projet Maintenance :</strong>
+        <p>Entretien en maintenance de l'éolienne. Changement de charbon de génératrice, du graissage(pales, rotor, génératrice), regonflage d'accumulateur de groupe hydraulique, prises de mesures, remplacement de filtres, test de sécurité(overspeed, arrêt d'urgence,...). </p>
+    </div>
+<br>
+<br>
+<br>
+<br>
+    <div class="portfolio-grid">
+        <img src="images/oral.jpg" alt="Nordex 1">
+        <img src="images/pwp.jpg" alt="Projet Alternance">
+    </div>
+    <div class="project-text">
+        <strong>Diaporama 1ère année NORDEX :</strong>
+        <p>Voici mon diaporama de présentation de projet de première année d'alternance : </p>
+	<a href="power.pptx" target="_blank">Voir la présentation PowerPoint</a>
+
     </div>
     <a href="#projets" class="btn-back">← Retour aux Projets</a>
 </section>
@@ -168,11 +197,36 @@ h4 { margin-top:25px; margin-bottom:12px; color:var(--secondary); font-weight:60
     <a href="#projets" class="btn-back">← Retour aux Projets</a>
 </section>
 
+<section id="informatique">
+    <h3>Dossier Informatique</h3>
+    <div class="portfolio-grid">
+        <img src="images/polulu.jpg" alt="Infortique 1">
+	<img src="images/code.jpg" >
+    </div>
+    <div class="project-text">
+        <strong>Description du projet MOWAY :</strong>
+        <p>Mon projet consistait à programmer un robot Moway en langage C pour un système embarqué, avec pour objectif de percevoir et suivre une ligne au sol, puis de naviguer de manière autonome dans un labyrinthe afin d’atteindre la ligne d’arrivée sans intervention extérieure. Ce travail m’a permis d’approfondir mes compétences en programmation embarquée, en logique de contrôle et en conception de comportements autonomes pour robot mobile.</p>
+    </div>
+<br>
+<br>
+<div class="portfolio-grid">
+        <img src="images/polulu2.jpg" alt="Infortique 2">
+        <img src="images/ccs.jpg" alt="Infortique 2">
+    </div>
+    <div class="project-text">
+        <strong>Description du projet Robot Polulu :</strong>
+        <p>Mon projet consistait à développer un robot suiveur de ligne, avec le logiciel CCS C Compiler et en allant bien au-delà des fonctionnalités de base. J’ai notamment programmé l’interface utilisateur via un écran LCD et des boutons, permettant de sélectionner différents modes de fonctionnement. J’ai également intégré des indicateurs visuels avec des LED, contrôlées selon l’état ou le mode choisi. Ce projet m’a permis d’approfondir mes compétences en programmation embarquée, gestion d’interfaces homme-machine et contrôle de périphériques électroniques.</p>
+    </div>
+
+    <a href="#projets" class="btn-back">← Retour aux Projets</a>
+</section>
+
 <!-- ===== VIDEOS ===== -->
 <section id="videos">
     <h3>Vidéos</h3>
     <div class="portfolio-grid">
-        <p>Ajoutez ici vos vidéos ou captures d’écran de vos projets (format iframe ou lien YouTube)</p>
+        <img src="images/build.jpg" alt="Infortique 2">
+        <p><strong>Emplacement Vide, en cours de construction...</strong></p>
     </div>
     <a href="#" class="btn-back">← Retour à l’accueil</a>
 </section>
@@ -202,7 +256,7 @@ h4 { margin-top:25px; margin-bottom:12px; color:var(--secondary); font-weight:60
 </div>
 
 <footer>
-    © 2026 • Floryan ROSE – Technicien Éolien
+    © 2026 • Floryan ROSE – Amiens | Haut-de-France
 </footer>
 
 </body>
