@@ -8,6 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
 <style>
+
+
 :root {
     --primary: #0a2540;
     --secondary: #0078d4;
@@ -68,8 +70,30 @@ h4 { margin-top:25px; margin-bottom:12px; color:var(--secondary); font-weight:60
 
 /* Responsive */
 @media (max-width:768px){ header h1 { font-size:2.2rem; } section { padding:30px; } .profile-images img { width:100%; } }
+
+header, .btn { transition: all 0.3s ease; }
+.btn:hover { transform: scale(1.05); }
+
+html {
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header, .btn {
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    transform: scale(1.05);
+}
+
+header {
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
 </style>
-</head>
 
 <body>
 
@@ -85,6 +109,25 @@ h4 { margin-top:25px; margin-bottom:12px; color:var(--secondary); font-weight:60
         <a href="#contact-modal" class="btn btn-outline">Contact</a>
         <a href="https://fr.linkedin.com/in/floryan-rose-7179a1266" class="btn btn-outline" target="_blank">LinkedIn</a>
     </nav>
+<img 
+  src="images/tete.jpg"
+  alt="Photo de profil"
+  id="profile-top-right"
+  style="
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0078d4;
+    background: white;
+    cursor: pointer;
+    z-index: 100;
+  "
+>
+
 </header>
 
 <div class="main-content">
