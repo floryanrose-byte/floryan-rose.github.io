@@ -47,9 +47,9 @@ h4 { margin-top:25px; margin-bottom:12px; color:var(--secondary); font-weight:60
 .profile-images img { width:calc(50% - 7.5px); border-radius:8px; border:1px solid #ddd; }
 
 /* ===== SECTIONS PLEINE PAGE ===== */
-#projets, #alternance, #automatisme, #robotique, #informatique, #competences, #videos, #hobbies { display:none; position:fixed; inset:0; background:white; padding:50px; overflow-y:auto; z-index:1000; }
-#projets:target, #alternance:target, #automatisme:target, #robotique:target, #informatique:target, #competences:target, #videos:target, #hobbies:target { display:block; }
-#projets:target ~ .main-content, #alternance:target ~ .main-content, #automatisme:target ~ .main-content, #robotique:target ~ .main-content, #informatique:target ~ .main-content, #competences:target ~ .main-content, #videos:target ~ .main-content, #hobbies:target ~ .main-content { display:none; }
+#projets, #alternance, #automatisme, #robotique, #informatique, #electrique, #competences, #videos, #hobbies { display:none; position:fixed; inset:0; background:white; padding:50px; overflow-y:auto; z-index:1000; }
+#projets:target, #alternance:target, #automatisme:target, #robotique:target, #electrique:target, #informatique:target, #competences:target, #videos:target, #hobbies:target { display:block; }
+#projets:target ~ .main-content, #alternance:target ~ .main-content, #automatisme:target ~ .main-content, #robotique:target ~ .main-content, #electronique:target ~ .main-content, #informatique:target ~ .main-content, #competences:target ~ .main-content, #videos:target ~ .main-content, #hobbies:target ~ .main-content { display:none; }
 
 .portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:15px; margin-bottom:25px; }
 .portfolio-grid img { width:100%; border-radius:8px; border:1px solid #ddd; }
@@ -84,6 +84,7 @@ header, .btn {
     transform: scale(1.05);}
 header {
     transition: background 0.3s ease, box-shadow 0.3s ease;}
+
 </style>
 
 <body>
@@ -158,11 +159,14 @@ header {
 <section id="projets">
     <h3>Projets / Réalisations</h3>
     <div class="portfolio-grid">
-        <a href="#alternance" class="btn btn-outline">📁 Alternance</a>
-        <a href="#automatisme" class="btn btn-outline">📁 Automatisme</a>
-        <a href="#robotique" class="btn btn-outline">📁 Robotique</a>
-	<a href="#informatique" class="btn btn-outline">📁 Informatique</a>
+        <a href="#alternance" class="btn btn-outline">⚙️​ Alternance</a>
+        <a href="#automatisme" class="btn btn-outline">📡​ Automatisme</a>
+        <a href="#robotique" class="btn btn-outline">🤖​ Robotique</a>
+	<a href="#informatique" class="btn btn-outline">💻​ Informatique</a>
+	<a href="#electrique" class="btn btn-outline">⚡ Electrique</a>
     </div>
+	<img src="images/pjt.jpg">
+
     <a href="#" class="btn-back">← Retour à l’accueil</a>
 </section>
 
@@ -279,6 +283,20 @@ J’ai ensuite créé et structuré les variables, développé les programmes de
 <br>
 <br>
 <div class="portfolio-grid">
+        <img src="images/vs.jpg" alt="Infortique 2">
+        <img src="images/sql.jpg" alt="Infortique 2">
+    </div>
+    <div class="project-text">
+        <strong>Description du projet de la page web :</strong>
+        <p>Ce projet avait pour objectif de concevoir une page web développée sous Visual Studio, connectée à une base de données SQL Server. Le principe consistait à recréer un espace numérique de type « Pronote », permettant une gestion sécurisée des notes selon le rôle de l’utilisateur.
+
+Chaque étudiant dispose d’un accès personnel lui permettant de consulter uniquement ses propres notes. Les enseignants peuvent consulter les notes des étudiants de leur matière et en ajouter ou les modifier. Un compte administrateur possède quant à lui l’ensemble des droits, notamment la gestion des utilisateurs, des matières et des notes.
+
+Ce projet a permis de mettre en œuvre des notions de développement web et de la gestion de bases de données via une page web. </p>
+    </div>
+<br>
+<br>
+<div class="portfolio-grid">
         <img src="images/polulu2.jpg" alt="Infortique 2">
         <img src="images/ccs.jpg" alt="Infortique 2">
     </div>
@@ -287,8 +305,27 @@ J’ai ensuite créé et structuré les variables, développé les programmes de
         <p>Mon projet consistait à développer un robot suiveur de ligne, avec le logiciel CCS C Compiler et en allant bien au-delà des fonctionnalités de base. J’ai notamment programmé l’interface utilisateur via un écran LCD et des boutons, permettant de sélectionner différents modes de fonctionnement. J’ai également intégré des indicateurs visuels avec des LED, contrôlées selon l’état ou le mode choisi. Ce projet m’a permis d’approfondir mes compétences en programmation embarquée, gestion d’interfaces homme-machine et contrôle de périphériques électroniques.</p>
     </div>
 
+
+
+
     <a href="#projets" class="btn-back">← Retour aux Projets</a>
 </section>
+
+<section id="electrique">
+    <h3>Dossier Electrique</h3>
+    <div class="portfolio-grid">
+        <img src="images/maquette.jpg" alt="Infortique 1">
+	<img src="images/schneider.jpg" >
+    </div>
+    <div class="project-text">
+        <strong>Description du système de sécurité :</strong>
+        <p>Réalisation de la sécurité câblée à base de relais non programmable. Nous assurerons un câblage avec un arrêt d’urgence, un capteur de porte et un réarmement. Vous trouverez ci-joint le rapport complet de ce projet :</p>
+	<a href="CR_Cablage_Sécurité.pdf" target="_blank">Voir le rapport PDF</a>
+    </div>
+
+    <a href="#projets" class="btn-back">← Retour aux Projets</a>
+</section>
+
 
 <!-- ===== VIDEOS ===== -->
 <section id="videos">
@@ -330,4 +367,3 @@ J’ai ensuite créé et structuré les variables, développé les programmes de
 
 </body>
 </html>
-
