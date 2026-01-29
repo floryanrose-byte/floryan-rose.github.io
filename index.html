@@ -362,8 +362,19 @@ Ce projet a permis de mettre en œuvre des notions de développement web et de l
 </div>
 
 <footer>
-    © 2026 • Floryan ROSE – Amiens | Haut-de-France
+    <span id="view-counter">0</span> © 2026 • Floryan ROSE – Amiens | Haut-de-France
 </footer>
+<script>
+    let views = localStorage.getItem("site_views");
 
+    if (views === null) {
+        views = 1;
+    } else {
+        views = parseInt(views) + 1;
+    }
+
+    localStorage.setItem("site_views", views);
+    document.getElementById("view-counter").textContent = views;
+</script>
 </body>
 </html>
