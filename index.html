@@ -92,6 +92,21 @@ header, .btn {
 header {
     transition: background 0.3s ease, box-shadow 0.3s ease;}
 
+
+.bouton-projet-actif {
+    background-color: green;
+    border: 2px solid green;
+    color: white;
+}
+
+/* garder la même couleur même au survol */
+.bouton-projet-actif:hover {
+    background-color: green;
+    border-color: green;
+    color: white;
+    transform: scale(1.05); /* garde ton effet zoom */
+}
+
 </style>
 
 <body>
@@ -107,7 +122,7 @@ header {
         <a href="#hobbies" class="btn btn-outline">Hobbies</a>
         <a href="#contact-modal" class="btn btn-outline">Contact</a>
         <a href="https://fr.linkedin.com/in/floryan-rose-7179a1266" class="btn btn-outline" target="_blank">LinkedIn</a>
-		<a href="#projet-modal" class="btn btn-outline">Projet Professionnel</a>
+		<a href="#projet-modal" class="btn btn-outline bouton-projet-actif">Projet Professionnel</a>
     </nav>
 <img 
   src="images/tete.jpg"
